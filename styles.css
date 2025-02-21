@@ -235,7 +235,7 @@ button:hover {
 .form-container {
     position: relative; 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
     padding: 5em;
@@ -256,23 +256,23 @@ button:hover {
 }
 
 #torch-top-left {
-    top: -50px;
-    left: 560px;
+    top: -100px;
+    left: 100px;
 }
 
 #torch-top-right {
-    top: -50px;
-    right: 560px;
+    top: -100px;
+    right: 100px;
 }
 
 #torch-bottom-left {
-    bottom: -50px;
-    left: 560px;
+    bottom: -100px;
+    left: 100px;
 }
 
 #torch-bottom-right {
-    bottom: -50px;
-    right: 560px;
+    bottom: -100px;
+    right: 100px;
 }
 
 form {
@@ -397,10 +397,13 @@ textarea {
 
     /* Adjust about container */
     .about-container {
+        display: flex;
         flex-direction: column;
-        max-width: 90%; /* Prevents exceeding screen width */
-        margin: auto;
+        align-items: center; 
+        justify-content: center;
+        max-width: 80%; /* Prevents exceeding screen width */
         padding: 10px;
+        margin-left: 10px;
     }
 
     .about-section {
@@ -425,15 +428,18 @@ textarea {
 
     /* Ensure form fields scale correctly */
     form {
-        width: 100%;
+        display: flex; 
+        flex-direction: column;
+        
+        align-items: center; 
         max-width: 100%;
+        max-height: 50%;
     }
 
     label {
         font-size: 1.2em;
-        display: block;
+        
         text-align: center;
-        margin-bottom: 5px;
     }
 
     input, textarea {
@@ -464,7 +470,6 @@ textarea {
 
     /* Adjust torches for smaller screens */
     .torch-container {
-        margin-top: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -487,10 +492,20 @@ textarea {
     #torch-top-left {
         left: 65px;
         bottom: -108px;
+        margin-left: 200px;
+    }
+
+    #torch-top-right {
+        margin-right: 300px;
     }
     
     #torch-bottom-right {
         top: -108px;
-        right: -65px
+        right: -65px;
+        margin-right: -175px;
+    }
+
+    #torch-bottom-left {
+        margin-left: -250px;
     }
 }
