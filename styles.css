@@ -1,0 +1,496 @@
+body {
+    margin: 0;
+    padding: 0; 
+    
+    
+}
+
+
+/* makes the header more flexible and makes it stack like a column */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    position: relative;
+    padding-top: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    background-color: transparent; 
+    padding: 10px;
+    position: relative; /* Ensures z-index applies */
+    z-index: 1; /* Ensures nav stays above background */
+}
+
+/* Ensuring the list displays correctly */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adjusted spacing */
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    font-family: 'Almendra';
+    text-decoration: none;
+    font-size: 2em;
+    color: goldenrod;
+    display: inline-block;
+    transition: opacity 0.3s ease-in-out;
+    border: 1px solid goldenrod;
+    padding: 5px;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
+
+
+.main {
+    background-color: black;
+    color: white;
+    padding: 50px 20px; /* Adds spacing */
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Cinzel Decorative';
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Cinzel Decorative';
+    
+}
+
+#broomstick {
+    width: 200px; 
+    height: auto;
+    margin: 50px; 
+    animation: spin 4s linear infinite; 
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+p {
+    font-size: 1.5rem;
+    font-family: 'Almendra';
+    
+}
+
+.about-container {
+    position: relative; /* Ensures hands are positioned relative to this */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 250px;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid goldenrod;
+    border-radius: 5px;
+    padding: 10px; /* Reduced padding */
+    max-width: 600px; /* Limits width */
+    margin: auto auto; /* Centers it */
+
+}
+
+/* Styles both id's together so they're symmetrical */
+#hand-one, #hand-two {
+    width: 150px;
+    height: auto;
+    position: absolute; /* Allows precise positioning */
+    top: 50%;
+    animation: wiggle 1.5s ease-in-out infinite;
+}
+
+/*  Both are given individual placements */
+
+#hand-one {
+    left: -120px; /* Moves it to the left */
+
+}
+
+#hand-two {
+    right: -120px; /* Moves it to the right */
+    
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Gives hands a little wiggle */
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg) translateX(2px); }
+    50% { transform: rotate(-3deg) translateX(-2px); }
+    75% { transform: rotate(3deg) translateX(2px); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Ensuring fog section takes up space properly */
+.fog {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: #000;
+}
+
+/* Centers potion container */
+.potion-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+.potion-container img {
+    max-width: 40%;
+    height: auto;
+    z-index: 1;
+    transform: rotate(15deg);
+    animation: float 3s ease-in-out infinite;
+}
+
+.inventory-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible columns */
+    gap: 20px; /* Adds spacing */
+    justify-items: center; /* Centers items horizontally */
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 200px;
+}
+
+/* Inventory styling for each potion starts here */
+.potion-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 350px;
+    height: auto; /* Added fixed height */
+    border: 1px solid goldenrod;
+    border-top-right-radius: 150px;
+    border-top-left-radius: 150px;
+}
+
+.potion-card p {
+    color: goldenrod;
+    font-size: 1.3em;
+    text-align: center;
+    min-height: 60px;
+    padding: 10px;
+}
+
+.potion-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: scale-down;
+}
+
+button {
+    border-radius: 50px;
+    background-color: white;
+    font-family: 'Almendra';
+    font-size: 1.2em;
+    width: 175px;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+}
+
+button:hover {
+    opacity: 0.4;
+}
+
+.form-container {
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5em;
+}
+
+.torch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 50px;
+}
+
+.torch-container img {
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+    position: absolute;
+}
+
+#torch-top-left {
+    top: -50px;
+    left: 560px;
+}
+
+#torch-top-right {
+    top: -50px;
+    right: 560px;
+}
+
+#torch-bottom-left {
+    bottom: -50px;
+    left: 560px;
+}
+
+#torch-bottom-right {
+    bottom: -50px;
+    right: 560px;
+}
+
+form {
+    line-height: 2em;
+    max-width: 450px;
+    border: 1px solid #9966CC;
+    border-radius: 3em;
+    border-radius: 3em;
+    padding: 3em;
+}
+
+label {
+    font-size: 1.5em;
+    font-family: 'Cinzel Decorative';
+    padding: 20px;
+}
+
+input {
+    border: 2px solid goldenrod;
+    border-radius: .2em;
+    padding: 5px;
+    font-family: inherit;
+    font-size: 20px;
+}
+
+textarea {
+    border: 2px solid goldenrod; 
+    border-radius: .2em;
+    font-family: inherit;
+    font-size: 20px;
+}
+
+
+
+@keyframes float {
+    0% {
+        transform: translateY(15);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(1);
+    }
+
+}
+
+/* Title inside fog */
+.fog-title {
+    color: white;
+    position: relative;
+    font-family: 'Cinzel Decorative';   
+    z-index: 3; /* Ensures the title stays above the fog */
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+
+
+/* Animation for fog starts here */
+
+.fog {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: #000;
+  }
+  
+  .fog-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .fog-img {
+    position: absolute;
+    height: 100vh;
+    width: 300vw;
+    z-index: 2;
+  }
+  
+  .fog-img-1 {
+    background: url("images/fog-1.png");
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-position: center;
+    animation: marquee 60s linear infinite;
+  }
+  
+  .fog-img-2 {
+    background: url("images/fog-2.png");
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-position: center;
+    animation: marquee 60s linear infinite reverse;
+}
+  
+  
+  @keyframes marquee {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+  
+    100% {
+      transform: translate3d(-200vw, 0, 0);
+    }
+  }
+
+/* Page responsiveness goes here */
+
+@media (max-width: 768px) {
+    /* Ensures no horizontal scrolling */
+    body {
+        overflow-x: hidden;
+    }
+
+    nav ul {
+        display: flex; 
+    }
+
+    /* Adjust about container */
+    .about-container {
+        flex-direction: column;
+        max-width: 90%; /* Prevents exceeding screen width */
+        margin: auto;
+        padding: 10px;
+    }
+
+    .about-section {
+        width: 100%; /* Takes full width on smaller screens */
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    /* Adjust hand positions */
+    #hand-one, #hand-two {
+        width: 100px; /* Scale down */
+        position: relative;
+    }
+    /* Form container adjustments */
+    .form-container {
+        max-width: 90%;  /* Ensures it fits within screen */
+        width: 90%;
+        padding: 1.5em;
+        margin: auto;
+        border-radius: 15px; /* Smoother edges */
+    }
+
+    /* Ensure form fields scale correctly */
+    form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    label {
+        font-size: 1.2em;
+        display: block;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    input, textarea {
+        width: 100%; /* Take full width inside form */
+        padding: 10px;
+        font-size: 1em;
+        border-radius: 5px;
+        border: 2px solid gold; /* Matches the aesthetic */
+    }
+    textarea {
+        min-height: 80px; /* Ensure it's large enough */
+    }
+
+    /* Button styling */
+    button {
+        display: block;
+        width: 80%;
+        max-width: 250px;
+        margin: 15px auto;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: 1.1em;
+        background: white;
+        color: black;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+
+    /* Adjust torches for smaller screens */
+    .torch-container {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .torch-container img {
+        width: 50px; /* Make them smaller */
+    }
+
+    #torch-top-left, #torch-top-right, 
+    #torch-bottom-left, #torch-bottom-right {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        top: auto;
+        margin: 5px;
+    }
+    #torch-top-left {
+        left: 65px;
+        bottom: -108px;
+    }
+    
+    #torch-bottom-right {
+        top: -108px;
+        right: -65px
+    }
+}
